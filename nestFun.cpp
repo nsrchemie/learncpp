@@ -1,14 +1,6 @@
 #include <iostream>
 using namespace std;
 
-int DemoConsoleOutput();
-
-int main ()
-{
-DemoConsoleOutput();
-return 0;
-}
-
 int DemoConsoleOutput()
 {
  cout << "Simple string literal" <<endl;
@@ -16,4 +8,9 @@ int DemoConsoleOutput()
  cout << "Calculating approximated Pi (22.0/7) = " << 22.0/7 << endl;
 
  return 0;
+}
+
+int main()
+{
+ return DemoConsoleOutput();
 }
