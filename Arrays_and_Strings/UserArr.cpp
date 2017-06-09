@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
-constexpr int Square(int number) { return number*number; }
+// constexpr int Square(int number) { return number*number; }
 
 int CheckIndexInput(int limit,int &nInd) {
  	cin >> nInd;
     if (nInd >= limit) {
-      cout << "You have tried to access a nonexistent element\n, try again:";
+      cout << "You have tried to access a nonexistent element";
       cin >> nInd;
       CheckIndexInput(limit,nInd); } 
     return 0;
@@ -18,8 +18,8 @@ int main()
 
  int myNums [ARR_LEN] = {3,6,-16,81,-2};
 
- //Create array with 25 slots
- int moreNums [Square(ARR_LEN)];
+ // //Create array with 25 slots
+ // int moreNums [Square(ARR_LEN)];
 
  cout << "Length of the array is " << distance(begin(myNums),end(myNums));
  cout << "\nEnter index of element to be changed: \n";
