@@ -1,11 +1,15 @@
 #include <iostream>
 using namespace std;
 constexpr int Square(int number) { return number*number; }
-int CheckIndex(int number, int limit) {
- if (number >= limit) {
-   cout << "You have tried to access a nonexistent element, try again:";
-   CheckIndex(number, limit); } 
-   return 0;}
+
+int CheckIndexInput(int limit,int &nInd) {
+ 	cin >> nInd;
+    if (nInd >= limit) {
+      cout << "You have tried to access a nonexistent element\n, try again:";
+      cin >> nInd;
+      CheckIndexInput(limit,nInd); } 
+    return 0;
+}
 
 
 int main()
@@ -20,9 +24,9 @@ int main()
  cout << "Length of the array is " << distance(begin(myNums),end(myNums));
  cout << "\nEnter index of element to be changed: \n";
  int elIndex;
- cin >> elIndex;
 
- CheckIndex(elIndex, ARR_LEN);
+
+ CheckIndexInput(ARR_LEN,elIndex);
 
  // if (elIndex >= ARR_LEN) {
  // cout << "You have tried to access a nonexistent element" << endl;
