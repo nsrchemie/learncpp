@@ -16,6 +16,11 @@ int main()
  int elIndex;
  cin >> elIndex;
 
+ if (elIndex >= ARR_LEN) {
+ cout << "You have tried to access a nonexistent element" << endl;
+ return 0;
+ }
+
  cout << "The value of that index in the array is: " << myNums[elIndex] << endl;
  cout << "Enter new value: ";
  int newVal;
