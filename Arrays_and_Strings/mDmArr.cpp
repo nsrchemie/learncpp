@@ -3,19 +3,16 @@ using namespace std;
 
 int main()
 {
- int threeRowsNCols [3][3] = {
+	const int A_ROWS = 3;
+	const int A_COLS = 3;
+ int threeRowsNCols [A_ROWS][A_COLS] = {
   {61,62,63}, {73,94,17}, {95,24,79}};
 
- cout << "Row 0: " << threeRowsNCols [0][0] << " "
-      << "Row 0: " << threeRowsNCols [0][1] << " "
-      << "Row 0: " << threeRowsNCols [0][2] << endl;
-
- cout << "Row 1: " << threeRowsNCols [1][0] << " "
-      << "Row 1: " << threeRowsNCols [1][1] << " "
-      << "Row 1: " << threeRowsNCols [1][2] << endl;
-
- cout << "Row 2: " << threeRowsNCols [2][0] << " "
-      << "Row 2: " << threeRowsNCols [2][1] << " "
-      << "Row 2: " << threeRowsNCols [2][2] << endl;
+  for (int row = 0; row < A_ROWS; ++row) {
+  	for (int col = 0; col < A_COLS; ++col) {
+  		cout << "Row [" << row << "] Col [" << col 
+  		<< "] = " << threeRowsNCols[row][col] << endl;
+  	}
+  }
  return 0;
 }
